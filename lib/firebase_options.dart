@@ -24,7 +24,10 @@ class DefaultFirebaseOptions {
     }
     switch (defaultTargetPlatform) {
       case TargetPlatform.android:
-        return android;
+        throw UnsupportedError(
+          'DefaultFirebaseOptions have not been configured for android - '
+          'you can reconfigure this by running the FlutterFire CLI again.',
+        );
       case TargetPlatform.iOS:
         return ios;
       case TargetPlatform.macOS:
@@ -49,20 +52,12 @@ class DefaultFirebaseOptions {
     }
   }
 
-  static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyApbHRX0ZbuOH_ARH5IOucuJdiAvr_EErk',
-    appId: '1:351864429075:android:764d1872de4de1e4577de6',
-    messagingSenderId: '351864429075',
-    projectId: 'sheek-bazar',
-    storageBucket: 'sheek-bazar.appspot.com',
-  );
-
   static const FirebaseOptions ios = FirebaseOptions(
     apiKey: 'AIzaSyD39hGw7J-BgdYi3TdYAyxmoFh6Gqik92g',
-    appId: '1:351864429075:ios:ccc69173370697b8577de6',
+    appId: '1:351864429075:ios:84f9f25b9b3344b2577de6',
     messagingSenderId: '351864429075',
     projectId: 'sheek-bazar',
     storageBucket: 'sheek-bazar.appspot.com',
-    iosBundleId: 'com.example.sheek',
+    iosBundleId: 'com.example.clone',
   );
 }
